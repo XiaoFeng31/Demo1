@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入scrollReval库，最好在最前面引入 -->
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
+    <!-- 引入font awesome图标库 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <!-- 引入glide的css样式 -->
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 给头部标签这是一个固定导航 -->
+    <header>
+      <div class="logo">电竞门户</div>
+      <!-- nav标签定义导航栏 -->
+      <nav>
+        <!-- a中的herf也可以写id的实现跳转 -->
+        <a href="#home">首页</a>
+        <a href="#about-us">关于我们</a>
+        <a href="#showcases">选手风采</a>
+        <a href="#service">游戏训练</a>
+        <a href="#team-intro">导师队伍</a>
+        <a href="#camp-activities">训练营动态</a>
+        <!-- 添加一个搜索图标 -->
+        <i class="fas fa-search"></i>
+      </nav>
+      <!-- 接下来定义折叠导航按钮 -->
+      <div class="burger">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
+    </header>
+    <!-- 初始化轮播图,按glide库定义好的一步步写-->
+    <div id="home" class="glide">
+      <!-- 定义轮播图轨道 -->
+      <div class="glide__track" data-glide-el="track">
+        <!-- 定义轮播图容器 -->
+        <div class="glide__slides">
+          <div class="glide__slide">
+            <div class="slide-caption">
+              <h1>海量游戏，应有尽有</h1>
+              <h3>适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活</h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <!-- 定义一个背景的遮罩层，让文字显得更加清晰 -->
+            <div class="backdrop"></div>
+            <!-- 第二张轮播图放入视频,浏览器下必须静音才能自动播放和循环播放 -->
+            <video src="videos/Dota.mp4" muted autoplay loop></video>
+          </div>
+          <div class="glide__slide">
+            <div class="slide-caption">
+              <h1>游戏资讯，尽在掌握</h1>
+              <h3>网罗每日游戏资讯，关注实时电竞动态，享受美丽游戏人生</h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <!-- 定义一个背景的遮罩层，让文字显得更加清晰 -->
+            <div class="backdrop"></div>
+            <!-- 放入图片 -->
+            <img src="images/lunbotu1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- 定义切换轮播的按钮和控制原点 -->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          >
+        </button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
+    </div>
+    <!-- 定义一个关于我们页面的容器 -->
+    <div class="content-wrapper">
+      <!-- 单独的一个区域，一般用section -->
+      <section id="about-us" class="about-us">
+        <h2 class="title1">关于我们</h2>
+        <p class="intro">
+          每日更新Steam、Epic、Uplay等游戏平台游戏资讯，提供DOTA2、LOL、CSGO等电竞赛事数据
+        </p>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-lightbulb"></i>
+            <h4 class="feature-title">折扣资讯</h4>
+            <p class="feature-content">提供Steam、Epic等平台游戏优惠折扣资讯</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-line"></i>
+            <h4 class="feature-title">赛事信息</h4>
+            <p class="feature-content">实时更新DOTA2、LOL等电竞赛事资讯</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shopping-cart"></i>
+            <h4 class="feature-title">游戏周边</h4>
+            <p class="feature-content">
+              手办、主题卫衣、饰品等海量游戏主题周边热销中
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-desktop"></i>
+            <h4 class="feature-title">游戏攻略</h4>
+            <p class="feature-content">
+              知名游戏高玩入住，为你编写一对一游戏攻略！
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4 class="feature-title">游戏优化</h4>
+            <p class="feature-content">
+              玩游戏卡顿掉帧？这里有你需要的解决方案！
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-id-card"></i>
+            <h4 class="feature-title">选手信息</h4>
+            <p class="feature-content">
+              想要看你的粉的选手资讯？这里通通都有！
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="showcases" class="showcases section-bg">
+        <h2 class="title1">选手风采</h2>
+        <div class="filter-btns">
+          <!-- 给按钮属性添加上数据筛选器 -->
+          <button class="filter-btn active" data-filter="*">全部</button>
+          <button class="filter-btn" data-filter=".LOL">LOL</button>
+          <button class="filter-btn" data-filter=".DOTA2">DOTA2</button>
+          <button class="filter-btn" data-filter=".china">中国</button>
+        </div>
+        <div class="cases">
+          <div class="case-item china LOL">
+            <img src="/images/uzi.jpeg" alt="" />
+          </div>
+          <div class="case-item DOTA2">
+            <img src="/images/sumail.jpg" alt="" />
+          </div>
+          <div class="case-item china DOTA2">
+            <img src="/images/sccc.jpg" alt="" />
+          </div>
+          <div class="case-item LOL">
+            <img src="/images/rekkless.jpg" alt="" />
+          </div>
+          <div class="case-item">
+            <img src="/images/kennys.jpg" alt="" />
+          </div>
+          <div class="case-item LOL">
+            <img src="/images/faker.jpg" alt="" />
+          </div>
+          <div class="case-item china LOL">
+            <img src="/images/clearlove.jpg" alt="" />
+          </div>
+          <div class="case-item china DOTA2">
+            <img src="/images/ame.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="service" class="service">
+        <h2 class="title1">游戏训练</h2>
+        <p class="intro">
+          十大独家精品课程听王者导师为您量身制定适合您各个英雄的打法和套路
+        </p>
+        <div class="services">
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">
+              学员提出需求，包括所玩的游戏和需要实现的效果
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">训练评估</h2>
+            <p class="service-content">
+              游戏导师观看学员录像，完成分析，提出要害
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-file-signature"></i>
+            <h2 class="service-title">完成报名</h2>
+            <p class="service-content">分析完成后即下单报名，进入训练营学习</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-user"></i>
+            <h2 class="service-title">实时讲解课</h2>
+            <p class="service-content">
+              模拟上课学习的情境。让大家能学到实用的上分技巧的同时也能与老师各种互动，从而不会觉得乏味
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h2 class="service-title">分析课</h2>
+            <p class="service-content">
+              学生录制视频，并上传到优酷。发送给老师观察分析，导师给出学生学习建议
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-user-check"></i>
+            <h2 class="service-title">总结课</h2>
+            <p class="service-content">
+              导师给出评价与建议，并总结学员的进步情况
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="team-intro" class="team-intro section-bg">
+        <h2 class="title1">导师队伍</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/uzi.jpeg" alt="" />
+            </div>
+            <h4 class="name">简自豪</h4>
+            <p class="position">世界顶尖adc</p>
+            <ul class="social-links">
+              <!-- i是图标 -->
+              <li>
+                <a href=""><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-qq"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/clearlove.jpg" alt="" />
+            </div>
+            <h4 class="name">明凯</h4>
+            <p class="position">MSI冠军打野</p>
+            <ul class="social-links">
+              <li>
+                <a href=""><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-qq"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/sccc.jpg" alt="" />
+            </div>
+            <h4 class="name">冷锋</h4>
+            <p class="position">NEWBEE现任中单选手</p>
+            <ul class="social-links">
+              <li>
+                <a href=""><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-qq"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/faker.jpg" alt="" />
+            </div>
+            <h4 class="name">李相赫</h4>
+            <p class="position">LOL历史第一人</p>
+            <ul class="social-links">
+              <li>
+                <a href=""><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-qq"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="data-section" class="data-section">
+        <div class="data-piece">
+          <i class="fas fa-graduation-cap"></i>
+          <div class="num">20</div>
+          <div class="data-desc">位导师</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-award"></i>
+          <div class="num">443</div>
+          <div class="data-desc">名毕业学员</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-portrait"></i>
+          <div class="num">4396</div>
+          <div class="data-desc">位在营学员</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-school"></i>
+          <div class="num">4</div>
+          <div class="data-desc">所线下训练营</div>
+        </div>
+      </section>
+      <section id="camp-activities" class="camp-activities">
+        <h2 class="title1">训练营动态</h2>
+        <p class="intro">关注训练营动态，展现学员风采</p>
+        <div class="activities">
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/xunlianyin1.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="date-published">
+                <i class="fa fa-calendar"></i>2020年4月2日
+              </p>
+              <p class="comments"><i class="fa fa-comments"></i>33条评论</p>
+            </div>
+            <h2 class="act-title">第一次线下一对一指导训练</h2>
+            <article>
+              认真参加直播课，多向导师提问。认真学习课程里的内容，不要讲过了还问;认真去按照老师的建议和要求进行练习。每次一对一导师都会给出建议，以及对你练习目标的规划;不要总去埋怨队友，既然要上分就一定要比队友更强!
+            </article>
+            <button class="readmore-btn">了解更多</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/xunlianying2.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="date-published">
+                <i class="fa fa-calendar"></i>2020年4月2日
+              </p>
+              <p class="comments"><i class="fa fa-comments"></i>33条评论</p>
+            </div>
+            <h2 class="act-title">第一次线下一对一指导训练</h2>
+            <article>
+              认真参加直播课，多向导师提问。认真学习课程里的内容，不要讲过了还问;认真去按照老师的建议和要求进行练习。每次一对一导师都会给出建议，以及对你练习目标的规划;不要总去埋怨队友，既然要上分就一定要比队友更强!
+            </article>
+            <button class="readmore-btn">了解更多</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/xunlianying3.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="date-published">
+                <i class="fa fa-calendar"></i>2020年4月2日
+              </p>
+              <p class="comments"><i class="fa fa-comments"></i>33条评论</p>
+            </div>
+            <h2 class="act-title">第一次线下一对一指导训练</h2>
+            <article>
+              认真参加直播课，多向导师提问。认真学习课程里的内容，不要讲过了还问;认真去按照老师的建议和要求进行练习。每次一对一导师都会给出建议，以及对你练习目标的规划;不要总去埋怨队友，既然要上分就一定要比队友更强!
+            </article>
+            <button class="readmore-btn">了解更多</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 写页脚 -->
+    <footer>
+      <div class="footer-menus">
+        <div class="contact-us">
+          <p class="menu-title">联系我们</p>
+          <p>地址：中国xx省xx市xx路xx商务中心10号楼</p>
+          <p>电话：123456789876</p>
+          <p>传真：123456778908</p>
+          <p>电子邮箱：admin@abc.com</p>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">服务概览</p>
+          <!-- 用一个无序列表 -->
+          <ul class="menu-items">
+            <li><a href="#">游戏下载</a></li>
+            <li><a href="#">行业资讯</a></li>
+            <li><a href="#">竞技模拟</a></li>
+            <li><a href="#">线下训练</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">营地活动</p>
+          <!-- 用一个无序列表 -->
+          <ul class="menu-items">
+            <li><a href="#">毕业活动</a></li>
+            <li><a href="#">线上比赛</a></li>
+            <li><a href="#">线下聚会</a></li>
+            <li><a href="#">训练心得</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">信息查询</p>
+          <!-- 用一个无序列表 -->
+          <ul class="menu-items">
+            <li><a href="#">更新信息</a></li>
+            <li><a href="#">选手信息</a></li>
+            <li><a href="#">俱乐部信息</a></li>
+            <li><a href="#">公司信息</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">帮助与支持</p>
+          <!-- 用一个无序列表 -->
+          <ul class="menu-items">
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#">文档资源</a></li>
+            <li><a href="#">线下训练</a></li>
+          </ul>
+        </div>
+        <p class="icp-info">京ICP备 123456789-1号</p>
+        <p class="rights">
+          &copy; 2020 响应式游戏门户官网 版权所有
+        </p>
+        <!-- 回到顶层直接设置成空连接，所以点击时直接刷新页面达到回到顶层的效果,也可以设置成home -->
+        <div class="scrollToTop">
+          <a href="#home"><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- 引入glide库 -->
+    <script src="libs/glide/glide.min.js"></script>
+    <!-- 引入isotope库 -->
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <!-- 引入anime库 -->
+    <script src="libs/anime/anime.min.js"></script>
+    <!-- 引入流畅滚动的库 -->
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
